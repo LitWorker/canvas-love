@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱你™一万年~~~</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            background: #333;
+        }
+
+        canvas{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas></canvas>
+</body>
+</html>
+
+<script type="module">
+    // 引入
+    import { Love } from "./Love.js"
+    // 实例化
+    const love = new Love()
+    // 配置编写
+    const config = {
+            // 放大系数
+            scale:30,
+            // 半径
+            r:2,
+            // 弧度变量
+            change:0.03,
+            // 数量,越大越密集，当然，也会越卡...
+            count:10
+        }
+
+    love.setConfig(config)
+    // 开始
+    requestAnimationFrame(()=>love.setup())
+    setTimeout(() => {
+        love.setup()
+    }, 5000);
+</script>
