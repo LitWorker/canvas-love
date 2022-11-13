@@ -17,6 +17,7 @@
         }
 
         canvas{
+        /*避免滚动条，不舒服*/
             display: block;
         }
     </style>
@@ -25,7 +26,7 @@
     <canvas></canvas>
 </body>
 </html>
-
+<!--  模块导入，要设置type为module-->
 <script type="module">
     // 引入
     import { Love } from "./Love.js"
@@ -40,13 +41,10 @@
             // 弧度变量
             change:0.03,
             // 数量,越大越密集，当然，也会越卡...
-            count:10
+            count:20
         }
 
     love.setConfig(config)
-    // 开始
+    // 开始运行
     requestAnimationFrame(()=>love.setup())
-    setTimeout(() => {
-        love.setup()
-    }, 5000);
 </script>
