@@ -55,7 +55,7 @@ love.setConfig(config)
 ```js
 requestAnimationFrame(()=>love.setup())
 //或者定时器...一秒刷新60次
-setTimeout(() => {
+setInterval(() => {
 	love.setup()
 }, 1000 / 60);
 ```			
