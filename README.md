@@ -19,7 +19,7 @@
 createCoordinate(deg){
 	// 笛卡尔爱心公式
 	let x = this.scale * (16 * Math.sin(deg) * Math.sin(deg) * Math.sin(deg))
-		let y = this.scale * (13 * Math.cos(deg) - 5 * Math.cos(2 * deg) - 2 * Math.cos(3 * deg) - Math.cos(4 * deg))
+	let y = this.scale * (13 * Math.cos(deg) - 5 * Math.cos(2 * deg) - 2 * Math.cos(3 * deg) - Math.cos(4 * deg))
 	return {x,y}
 }
 ```
@@ -36,7 +36,7 @@ createCoordinate(deg){
 > 配置设置
 
 ```js
-    // 配置编写
+// 配置编写
 const config = {
     // 放大系数
     scale:30,
@@ -54,7 +54,9 @@ love.setConfig(config)
 
 ```js
 requestAnimationFrame(()=>love.setup())
+
 //或者定时器...一秒刷新60次
+
 setInterval(() => {
 	love.setup()
 }, 1000 / 60);
